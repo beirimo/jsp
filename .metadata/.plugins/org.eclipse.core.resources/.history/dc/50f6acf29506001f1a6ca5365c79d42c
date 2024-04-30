@@ -1,0 +1,9 @@
+package model;
+
+public @interface UserVO {
+
+	   private String uid;
+	   private String upass;
+	   private String uname;
+	
+}

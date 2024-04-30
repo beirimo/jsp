@@ -1,0 +1,21 @@
+package model;
+
+import java.sql.*;
+
+public class UserDAO {//Database Access Object
+	Connection con=Database.CON;
+	
+	public UserVO read(String uid) {    // read는 한 행이 리턴이 됨 - ???그래서 어쩌라고 뭔데 그게 ㅠ??? ㅠ 뭔데임마 ㅠ 알았어야지
+		UserVO vo=new UserVO();
+		try {
+			String sql="select * from users where uid=?";
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, uid);
+		}catch(Exception e) {
+			System.out.println("read:" + e.toString());
+		}
+		return vo;
+	}
+	
+	
+}
