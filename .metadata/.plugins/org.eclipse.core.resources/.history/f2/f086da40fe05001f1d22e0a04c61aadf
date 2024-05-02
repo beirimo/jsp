@@ -1,7 +1,0 @@
-package model;
-
-import com.sql.*;
-
-public class UserDAO {
-	Connection con=Database.CON;
-}
